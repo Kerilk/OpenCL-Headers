@@ -19,8 +19,8 @@
 #include "CL/cl_ext_intel.h"
 
 int
-main (void)
+main(void)
 {
-  printf ("cl_ext_intel.h standalone test PASSED.\n");
-  return 0;
+    printf("cl_ext_intel.h standalone test PASSED.\n");
+    return 0;
 }

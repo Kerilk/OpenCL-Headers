@@ -19,8 +19,8 @@
 #include "CL/cl_egl.h"
 
 int
-main (void)
+main(void)
 {
-  printf ("cl_egl.h standalone test PASSED.\n");
-  return 0;
+    printf("cl_egl.h standalone test PASSED.\n");
+    return 0;
 }

@@ -6,8 +6,6 @@ AlignAfterOpenBracket: AlwaysBreak
 IndentWidth: 4
 ContinuationIndentWidth: 4
 PointerAlignment: Middle
-AlignConsecutiveMacros: AcrossEmptyLinesAndComments
-AlignConsecutiveDeclarations: AcrossEmptyLinesAndComments
 SortIncludes:    false
 BraceWrapping:
   AfterFunction:   true
