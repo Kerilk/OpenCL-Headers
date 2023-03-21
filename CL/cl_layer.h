@@ -26,38 +26,36 @@
 #include <CL/cl.h>
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C" {
 #endif
 
 /***************************************************************
  * cl_loader_layers
  ***************************************************************/
-#define cl_loader_layers                1
+#define cl_loader_layers 1
 #define CL_LOADER_LAYERS_EXTENSION_NAME "cl_loader_layers"
 
-  typedef cl_uint cl_layer_info;
-  typedef cl_uint cl_layer_api_version;
+typedef cl_uint cl_layer_info;
+typedef cl_uint cl_layer_api_version;
 
 /* cl_layer_info */
-#define CL_LAYER_API_VERSION     0x4240
-#define CL_LAYER_NAME            0x4241
+#define CL_LAYER_API_VERSION 0x4240
+#define CL_LAYER_NAME 0x4241
 
 /* Misc API enums */
 #define CL_LAYER_API_VERSION_100 100
 
-  typedef cl_int (CL_API_CALL * clGetLayerInfo_fn) (cl_layer_info param_name,
-						    size_t param_value_size,
-						    void *param_value,
-						    size_t
-						    *param_value_size_ret);
+typedef cl_int(CL_API_CALL * clGetLayerInfo_fn)(
+    cl_layer_info param_name,
+    size_t param_value_size,
+    void * param_value,
+    size_t * param_value_size_ret);
 
-  typedef cl_int (CL_API_CALL * clInitLayer_fn) (cl_uint num_entries,
-						 const cl_icd_dispatch *
-						 target_dispatch,
-						 cl_uint * num_entries_ret,
-						 const cl_icd_dispatch **
-						 layer_dispatch);
+typedef cl_int(CL_API_CALL * clInitLayer_fn)(
+    cl_uint num_entries,
+    const cl_icd_dispatch * target_dispatch,
+    cl_uint * num_entries_ret,
+    const cl_icd_dispatch ** layer_dispatch);
 
 /*
 ** The function pointer typedefs prefixed with "pfn_" are provided for
@@ -66,36 +64,38 @@ extern "C"
 ** "_fn" instead, for consistency.
 */
 
-  typedef cl_int (CL_API_CALL * pfn_clGetLayerInfo) (cl_layer_info param_name,
-						     size_t param_value_size,
-						     void *param_value,
-						     size_t
-						     *param_value_size_ret);
+typedef cl_int(CL_API_CALL * pfn_clGetLayerInfo)(
+    cl_layer_info param_name,
+    size_t param_value_size,
+    void * param_value,
+    size_t * param_value_size_ret);
 
-  typedef cl_int (CL_API_CALL * pfn_clInitLayer) (cl_uint num_entries,
-						  const cl_icd_dispatch *
-						  target_dispatch,
-						  cl_uint * num_entries_ret,
-						  const cl_icd_dispatch **
-						  layer_dispatch);
+typedef cl_int(CL_API_CALL * pfn_clInitLayer)(
+    cl_uint num_entries,
+    const cl_icd_dispatch * target_dispatch,
+    cl_uint * num_entries_ret,
+    const cl_icd_dispatch ** layer_dispatch);
 
 #ifndef CL_NO_PROTOTYPES
 
-  extern CL_API_ENTRY cl_int CL_API_CALL
-    clGetLayerInfo (cl_layer_info param_name,
-		    size_t param_value_size,
-		    void *param_value, size_t *param_value_size_ret);
+extern CL_API_ENTRY cl_int CL_API_CALL
+clGetLayerInfo(
+    cl_layer_info param_name,
+    size_t param_value_size,
+    void * param_value,
+    size_t * param_value_size_ret);
 
-  extern CL_API_ENTRY cl_int CL_API_CALL
-    clInitLayer (cl_uint num_entries,
-		 const cl_icd_dispatch * target_dispatch,
-		 cl_uint * num_entries_ret,
-		 const cl_icd_dispatch ** layer_dispatch);
+extern CL_API_ENTRY cl_int CL_API_CALL
+clInitLayer(
+    cl_uint num_entries,
+    const cl_icd_dispatch * target_dispatch,
+    cl_uint * num_entries_ret,
+    const cl_icd_dispatch ** layer_dispatch);
 
-#endif				/* CL_NO_PROTOTYPES */
+#endif /* CL_NO_PROTOTYPES */
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif				/* OPENCL_CL_LAYER_H_ */
+#endif /* OPENCL_CL_LAYER_H_ */

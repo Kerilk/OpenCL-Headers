@@ -25,8 +25,8 @@
 #include "CL/cl_layer.h"
 
 int
-main (void)
+main(void)
 {
-  printf ("cl_icd_layer.h standalone test PASSED.\n");
-  return 0;
+    printf("cl_icd_layer.h standalone test PASSED.\n");
+    return 0;
 }

@@ -21,8 +21,8 @@
 #endif
 
 int
-main (void)
+main(void)
 {
-  printf ("cl_d3d11.h standalone test PASSED.\n");
-  return 0;
+    printf("cl_d3d11.h standalone test PASSED.\n");
+    return 0;
 }
