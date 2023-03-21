@@ -19,8 +19,8 @@
 #include "CL/opencl.h"
 
 int
-main(void)
+main (void)
 {
-    printf("opencl.h standalone test PASSED.\n");
-    return 0;
+  printf ("opencl.h standalone test PASSED.\n");
+  return 0;
 }

@@ -18,7 +18,8 @@
 #define __OPENCL_H
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
 #include <CL/cl.h>
@@ -29,4 +30,4 @@ extern "C" {
 }
 #endif
 
-#endif /* __OPENCL_H   */
+#endif				/* __OPENCL_H   */
